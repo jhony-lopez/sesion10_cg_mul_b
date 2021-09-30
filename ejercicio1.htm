@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+​   <!DOCTYPE html >
     <html >
     <head >
     <meta charset = "utf-8" / >
@@ -36,8 +36,6 @@ function cubo(x,y,z, px, py, pz, material, color, wf)
     return cube;
 }
 
-
-
 function init() 
 {
     renderer = new THREE.WebGLRenderer();
@@ -56,27 +54,29 @@ function init()
 	
     camera = new THREE.PerspectiveCamera(100, window.innerWidth / window.innerHeight, 0.1, 100);
     camera.position.set(6,6,6);
-      ​
 
-   ​arrCube[0].position.set (0,0,3);
-   ​arrCube[1].position.set (0,3,0);
-   ​arrCube[2].position.set (3,0,0); 
-   ​camera.lookAt(axesHelper.position);
-   ​clock = new THREE.Clock();
-   ​window.addEventListener('resize', onWindowResize, false);
+  
+    arrCube[0].position.set (0,0,3);
+    arrCube[1].position.set (0,3,0);
+    arrCube[2].position.set (3,0,0);
+
+    camera.lookAt(axesHelper.position);
+    clock = new THREE.Clock();
+    window.addEventListener('resize', onWindowResize, false);
 }
 var dir = 1;
+
 function onWindowResize() 
 {
-   ​windowHalfX = window.innerWidth / 2;
-   ​windowHalfY = window.innerHeight / 2;
-   ​camera.aspect = window.innerWidth / window.innerHeight;
-   ​camera.updateProjectionMatrix();
-   ​renderer.setSize(window.innerWidth, window.innerHeight);
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
 }
 init();
 renderer.render(scene, camera);
-//animate(); 
-t</script > 
-</body>
+
+</script > 
+</body> 
 </html>
